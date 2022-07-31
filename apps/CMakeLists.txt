@@ -25,4 +25,5 @@ add_subdirectory(mesh)
 add_subdirectory(point_clouds)
 add_subdirectory(hip_surgery)
 add_subdirectory(transforms)
+add_subdirectory(zhuc)
 

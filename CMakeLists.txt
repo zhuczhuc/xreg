@@ -30,6 +30,12 @@ cmake_minimum_required(VERSION 3.13.0 FATAL_ERROR)
 # Version format is YYYY.MM.DD for a release and YYYY.MM.DD.1 for devel after the release
 project(xreg VERSION 2021.09.19.1)
 
+if(${CMAKE_BUILD_TYPE} STREQUAL "Debug")
+  list(APPEND CMAKE_PREFIX_PATH "C:\\usr\\local_debug")
+else()
+  list(APPEND CMAKE_PREFIX_PATH "C:\\usr\\local")
+endif()
+
 set (CMAKE_CXX_STANDARD "11" CACHE STRING "C++ Standard (needs at least 11)")
 mark_as_advanced(CMAKE_CXX_STANDARD)
 
